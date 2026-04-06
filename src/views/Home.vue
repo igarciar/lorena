@@ -1,1 +1,1 @@
-<template><h1>Home</h1></template>
+<template><h1>Demo Completa</h1><router-link to='/page'>Demo Markdown</router-link><br/><router-link to='/gallery'>Galería Avanzada</router-link><br/><router-link to='/upload'>Subir a R2</router-link></template>
