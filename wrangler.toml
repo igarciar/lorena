@@ -1,4 +1,4 @@
-name='vue-worker-modern'
+name='vue-worker-ci'
 compatibility_date='2024-04-01'
 main='.cloudflare/worker.js'
 assets={directory='dist'}
