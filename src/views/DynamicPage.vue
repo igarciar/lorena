@@ -1,7 +1,7 @@
 <template>
   <div class="page">
   
-  <TopMenu \>
+  <TopMenu />
     <h1>{{ title }}</h1>
     <PhotoGallery v-if="images.length" :images="images" />
     <div v-html="html"></div>
