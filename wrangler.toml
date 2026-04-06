@@ -1,5 +1,6 @@
-name='vue-cloudflare-markdown-demo'
-compatibility_date='2024-04-01'
+
+name = "vue-cloudflare-markdown-demo"
+compatibility_date = "2024-04-01"
+
 [site]
-bucket='dist'
-entry-point='dist'
+bucket = "./dis
