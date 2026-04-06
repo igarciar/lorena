@@ -1,7 +1,7 @@
-name="artista-elite-final"
+name="artista-elite-fusion"
 compatibility_date="2024-04-01"
 main="worker.js"
-assets={directory="dist"}
+assets = { directory="dist" }
 [[r2_buckets]]
 binding="ARTISTAR2"
 bucket_name="artista-bucket"

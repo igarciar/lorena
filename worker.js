@@ -1,1 +1,12 @@
-export default {async fetch(req,env){const u=new URL(req.url);if(u.pathname.startswith("/r2/")){const key=u.pathname.replace("/r2/","");const f=await env.ARTISTAR2.get(key);if(!f)return new Response("Not found",{status:404});return new Response(f.body,{headers:{"Content-Type":f.httpMetadata?.contentType||"application/octet-stream","Access-Control-Allow-Origin":"*"}});}return env.ASSETS.fetch(req);}};
+export default {
+  async fetch(req, env) {
+    const url = new URL(req.url);
+    if (url.pathname.startsWith('/r2/')) {
+      const key = url.pathname.replace('/r2/', '');
+      const file = await env.ARTISTAR2.get(key);
+      if (!file) return new Response('Not found', {status:404});
+      return new Response(file.body, { headers:{ 'Content-Type': file.httpMetadata?.contentType || 'application/octet-stream', 'Access-Control-Allow-Origin':'*' } });
+    }
+    return env.ASSETS.fetch(req);
+  }
+};

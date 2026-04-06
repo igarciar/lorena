@@ -1,0 +1,1 @@
+<template><footer>© 2026 Artista Elite Fusion</footer></template>

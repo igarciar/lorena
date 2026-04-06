@@ -1,0 +1,1 @@
+<template><header class="menu"><div>Artista Elite Fusion</div><nav><router-link to="/">Inicio</router-link> | <router-link to="/galeria">Galería</router-link> | <router-link to="/instagram">Instagram</router-link></nav></header></template>
