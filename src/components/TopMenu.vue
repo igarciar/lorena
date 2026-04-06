@@ -16,7 +16,19 @@
 </template>
 <script setup>
 import { ref, onMounted } from "vue";
-import { useMenu } from "@/utils/useMenu";
+//import { useMenu } from "@/utils/useMenu";
 const menu = ref([]);
-onMounted(async () => (menu.value = await useMenu()));
+
+let loaded = false;
+//onMounted(async () => (menu.value = await useMenu()));
+onMounted(async () => {
+   if (!loaded) {
+    const raw = await fetch("/src/content/menu.md").then((r) => r.text());
+    raw.split("\n").forEach((l) => {
+      if (l.startsWith("@menu:")) menu.value = JSON.parse(l.replace("@menu:", "").trim());
+    });
+    loaded = true;
+  }
+
+});
 </script>

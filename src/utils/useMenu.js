@@ -9,5 +9,6 @@ export async function useMenu() {
     });
     loaded = true;
   }
+  console.log(menu)
   return menu;
 }
