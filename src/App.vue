@@ -1,1 +1,1 @@
-<template><component :is="currentLayout"><router-view /></component></template><script setup>import { computed, onMounted } from 'vue'; import { appConfig } from './store/config'; import CleanStart from './layouts/CleanStart.vue'; import DefaultLayout from './layouts/DefaultLayout.vue'; const layouts={clean:CleanStart, default:DefaultLayout}; const currentLayout=computed(()=>layouts[appConfig.layout]||DefaultLayout); onMounted(()=>appConfig.load());</script>
+<template><router-view/></template>

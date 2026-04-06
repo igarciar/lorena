@@ -1,0 +1,1 @@
+<template><h1>Galería Avanzada</h1><PhotoGallery :images='imgs'/></template><script setup>import PhotoGallery from '@/components/PhotoGallery.vue';const imgs=['/src/assets/demo1.jpg','/src/assets/demo2.jpg','/src/assets/demo3.jpg'];</script>
