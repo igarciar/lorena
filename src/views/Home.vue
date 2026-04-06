@@ -1,0 +1,1 @@
+<template><TopMenu/><div class='page'><h1>Bienvenido al Demo Artístico</h1><p>Explora la obra en tonos azules</p></div><Footer/></template><script setup>import TopMenu from '@/components/TopMenu.vue';import Footer from '@/components/Footer.vue';</script>

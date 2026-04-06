@@ -1,4 +1,1 @@
-
-<template>
-  <footer>© 2026 Artista — Todos los derechos reservados</footer>
-</template>
+<template><footer>© 2026 Artista — Sitio Demo</footer></template>
