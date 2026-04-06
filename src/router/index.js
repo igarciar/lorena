@@ -1,0 +1,1 @@
+import { createRouter, createWebHistory } from 'vue-router'; import HomeView from '../views/HomeView.vue'; import PageView from '../views/PageView.vue'; const routes=[{path:'/home',component:HomeView},{path:'/page/:id',component:PageView},{path:'/',redirect:'/home'}]; export default createRouter({history:createWebHistory(),routes});
