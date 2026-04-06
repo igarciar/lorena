@@ -1,0 +1,1 @@
+<template><div v-html='html'></div></template><script setup>import { ref, onMounted } from 'vue'; import { marked } from 'marked'; const html=ref(''); onMounted(async()=>{ const md=await fetch('/src/markdown/demo.md').then(r=>r.text()); html.value=marked(md); });</script>

@@ -1,1 +1,0 @@
-<template><div><h2>Página dinámica</h2></div></template>

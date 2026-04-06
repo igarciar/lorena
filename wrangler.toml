@@ -1,4 +1,4 @@
-name='vue-cloudflare-markdown-demo'
+name='vue-worker-modern'
 compatibility_date='2024-04-01'
-[site]
-bucket='dist'
+main='.cloudflare/worker.js'
+assets={directory='dist'}
