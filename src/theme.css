@@ -1,1 +1,30 @@
-body{margin:0;background:#EEEFF6;font-family:Inter,sans-serif;color:#272A4E;}h1{font-family:Playfair Display;} .page{padding:20px;} .menu{background:#333666;color:white;padding:15px;}footer{background:#18192F;color:white;padding:20px;text-align:center;}
+body {
+    margin: 0;
+    background: #a5a8c0;
+    font-family: Inter, sans-serif;
+    color: #272A4E;
+}
+
+h1 {
+    font-family: Playfair Display;
+}
+
+.page {
+    padding: 20px;
+    color: #272A4E;
+}
+
+.menu {
+    background: #26294d;
+    color: rgb(129, 137, 183);
+    padding: 15px;
+}
+.menu a:visited,.menu a {
+  color: rgb(211, 205, 243);
+}
+footer {
+    background: #18192F;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
