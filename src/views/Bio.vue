@@ -1,1 +1,0 @@
-<template><TopMenu/><div class=page><h1 class=reveal>Biografía</h1><p class=reveal>Biografía avanzada del artista…</p></div><Footer/></template>

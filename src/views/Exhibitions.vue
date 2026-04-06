@@ -1,1 +1,0 @@
-<template><TopMenu/><div class=page><h1 class=reveal>Exposiciones</h1><ul><li class=reveal>2024 — Materia Azul</li><li class=reveal>2023 — Silencios</li></ul></div><Footer/></template>

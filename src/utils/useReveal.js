@@ -1,1 +1,0 @@
-export function useReveal(sel,opt={}){const els=document.querySelectorAll(sel);const cfg=Object.assign({threshold:0.1,rootMargin:"0px 0px -10% 0px"},opt);const io=new IntersectionObserver((e)=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add("revealed");io.unobserve(x.target);}})},cfg);els.forEach(el=>io.observe(el));}

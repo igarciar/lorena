@@ -1,1 +1,0 @@
-<template><footer>© 2026 Artista — Versión Élite</footer></template>

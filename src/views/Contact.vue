@@ -1,1 +1,0 @@
-<template><TopMenu/><div class=page><h1 class=reveal>Contacto</h1></div><Footer/></template>

@@ -1,1 +1,1 @@
-<template><transition name="page-fade" mode="out-in"><router-view/></transition></template><style>.page-fade-enter-active,.page-fade-leave-active{transition:opacity .6s ease,transform .6s ease}.page-fade-enter-from{opacity:0;transform:translateY(20px)}.page-fade-leave-to{opacity:0;transform:translateY(-20px)}</style>
+<template><router-view/></template>
