@@ -1,6 +1,6 @@
 <template>
   <header class="menu">
-    <strong>Artista</strong>
+    <strong>Lorena Allas Santamaría</strong>
     <nav>
       <template v-for="i in menu" :key="i.label"
         ><router-link v-if="!i.children" :to="i.to">{{ i.label }}</router-link>
