@@ -22,6 +22,7 @@ onMounted(async () => {
     if (l.startsWith("@title:")) title.value = l.replace("@title:", "").trim();
     if (l.startsWith("@images:")) images.value = JSON.parse(l.replace("@images:", ""));
   });
-  html.value = parse(raw);
+  
+  html.value = parse(raw.split("@body:")[1]);
 });
 </script>
