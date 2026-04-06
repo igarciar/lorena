@@ -1,1 +1,1 @@
-<template><footer>© 2026 Artista — Sitio Demo</footer></template>
+<template><footer>© 2026 Artista — Portfolio PRO+</footer></template>
