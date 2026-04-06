@@ -1,1 +1,12 @@
-import{createRouter,createWebHistory}from'vue-router';import Home from '@/views/Home.vue';import Serie from '@/views/Serie.vue';import Page from '@/views/DynamicPage.vue';export default createRouter({history:createWebHistory(),routes:[{path:'/',component:Home},{path:'/serie/:id',component:Serie},{path:'/page/:id',component:Page,props:true}]});
+import { createRouter, createWebHistory } from "vue-router";
+import Home from "@/views/Home.vue";
+import Serie from "@/views/Serie.vue";
+import Page from "@/views/DynamicPage.vue";
+export default createRouter({
+  history: createWebHistory(),
+  routes: [
+    { path: "/", component: Home },
+    { path: "/serie/:id", component: Serie },
+    { path: "/page/:id", component: Page, props: true },
+  ],
+});

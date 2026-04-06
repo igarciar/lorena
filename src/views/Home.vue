@@ -1,5 +1,7 @@
 <template>
   <div class="page">
+  
+  <TopMenu />
     <section class="hero"><img :src="'/r2/' + hero" /></section>
     <section v-for="s in series" :key="s.id" class="series">
       <h2 class="series-title">
@@ -15,6 +17,7 @@
 </template>
 <script setup>
 import { ref, onMounted } from "vue";
+import TopMenu from "@/components/TopMenu.vue";
 const hero = ref("");
 const series = ref([]);
 onMounted(async () => {

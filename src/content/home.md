@@ -1,3 +1,2 @@
 @hero: "home-hero.jpg"
-@series:
-[{"id":"serie-i","title":"Serie I","items":[{"image":"obra1.jpg","label":"Obra 1","to":"/page/obra1"},{"image":"obra2.jpg","label":"Obra 2","to":"/page/obra2"},{"image":"obra3.jpg","label":"Obra 3","to":"/page/obra3"}]},{"id":"serie-ii","title":"Serie II","items":[{"image":"obra4.jpg","label":"Obra 4","to":"/page/obra4"},{"image":"obra5.jpg","label":"Obra 5","to":"/page/obra5"}]}]
+@series:[{"id":"serie-i","title":"Serie I","items":[{"image":"obra1.jpg","label":"Obra 1","to":"/page/obra1"},{"image":"obra2.jpg","label":"Obra 2","to":"/page/obra2"},{"image":"obra3.jpg","label":"Obra 3","to":"/page/obra3"}]},{"id":"serie-ii","title":"Serie II","items":[{"image":"obra4.jpg","label":"Obra 4","to":"/page/obra4"},{"image":"obra5.jpg","label":"Obra 5","to":"/page/obra5"}]}]

@@ -1,5 +1,6 @@
 <template>
   <div class="page">
+    <TopMenu />
     <h1>{{ title }}</h1>
     <p v-if="desc" style="opacity: 0.7">{{ desc }}</p>
     <div class="grid">
@@ -12,6 +13,7 @@
 <script setup>
 import { ref, onMounted } from "vue";
 import { useRoute } from "vue-router";
+import TopMenu from "@/components/TopMenu.vue";
 const r = useRoute();
 const title = ref("");
 const desc = ref("");
