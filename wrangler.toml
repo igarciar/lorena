@@ -1,3 +1,7 @@
-name='vue-cloudflare-demo'
+name='vue-cloudflare-markdown-demo'
 main='dist/_worker.js'
 compatibility_date='2024-04-01'
+workers_dev = true
+[site]
+bucket = 'dist'
+entry-point = 'dist'
