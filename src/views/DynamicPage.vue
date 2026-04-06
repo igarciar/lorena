@@ -1,5 +1,7 @@
 <template>
   <div class="page">
+  
+  <TopMenu \>
     <h1>{{ title }}</h1>
     <PhotoGallery v-if="images.length" :images="images" />
     <div v-html="html"></div>
@@ -8,6 +10,7 @@
 <script setup>
 import { ref, onMounted } from "vue";
 import parse from "@/utils/markdownEngine.js";
+import TopMenu from "@/components/TopMenu.vue";
 import PhotoGallery from "@/components/PhotoGallery.vue";
 const props = defineProps({ id: String });
 const title = ref("");
