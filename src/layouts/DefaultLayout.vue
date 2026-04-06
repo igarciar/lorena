@@ -1,0 +1,1 @@
+<template><div class='layout'><AppHeader/><main><slot/></main></div></template><script setup>import AppHeader from '../components/AppHeader.vue';</script><style scoped>.layout{min-height:100vh;background:var(--bg);color:var(--text);} main{padding:20px 40px;}</style>

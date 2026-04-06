@@ -1,0 +1,1 @@
+import { reactive } from 'vue'; export const appConfig=reactive({logo:'/src/assets/logo.png',layout:'clean',darkMode:false,async load(){}});
