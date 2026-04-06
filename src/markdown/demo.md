@@ -1,6 +1,6 @@
 # Página Markdown Demo
 
-Este es un texto **renderizado desde Markdown**.
+Texto **Markdown** funcionando.
 
 ## Imagen
 ![Ejemplo](https://picsum.photos/400)
