@@ -1,2 +1,24 @@
-<template><div class="page"><h1>{{title}}</h1><PhotoGallery v-if="images.length" :images="images"/><div v-html="html"></div></div></template><script setup>import {ref,onMounted} from "vue";import parse from "@/utils/markdownEngine.js";import PhotoGallery from "@/components/PhotoGallery.vue";const props=defineProps({id:String});const title=ref('');const html=ref('');const images=ref([]);onMounted(async()=>{const raw=await fetch('/src/content/'+props.id+'.md').then(r=>r.text());raw.split('
-').forEach(l=>{if(l.startsWith('@title:')) title.value=l.replace('@title:','').trim(); if(l.startsWith('@images:')) images.value=JSON.parse(l.replace('@images:',''));});html.value=parse(raw);});</script>
+<template>
+  <div class="page">
+    <h1>{{ title }}</h1>
+    <PhotoGallery v-if="images.length" :images="images" />
+    <div v-html="html"></div>
+  </div>
+</template>
+<script setup>
+import { ref, onMounted } from "vue";
+import parse from "@/utils/markdownEngine.js";
+import PhotoGallery from "@/components/PhotoGallery.vue";
+const props = defineProps({ id: String });
+const title = ref("");
+const html = ref("");
+const images = ref([]);
+onMounted(async () => {
+  const raw = await fetch("/src/content/" + props.id + ".md").then((r) => r.text());
+  raw.split("\n").forEach((l) => {
+    if (l.startsWith("@title:")) title.value = l.replace("@title:", "").trim();
+    if (l.startsWith("@images:")) images.value = JSON.parse(l.replace("@images:", ""));
+  });
+  html.value = parse(raw);
+});
+</script>
