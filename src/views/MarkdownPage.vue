@@ -1,1 +1,0 @@
-<template><div v-html='html' class='markdown'></div></template><script setup>import { ref, onMounted } from 'vue';import parseMd from '../utils/markdownEngine.js';const html=ref('');onMounted(async()=>{ const md=await fetch('/src/markdown/demo.md').then(r=>r.text()); html.value=parseMd(md);});</script>

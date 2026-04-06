@@ -1,1 +1,0 @@
-<template><h1>Demo Completa Sin R2</h1><router-link to='/page'>Demo Markdown</router-link><br/><router-link to='/gallery'>Galería Avanzada</router-link></template>

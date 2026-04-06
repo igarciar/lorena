@@ -1,1 +1,13 @@
-import { createRouter, createWebHistory } from 'vue-router';import Home from '../views/Home.vue';import MarkdownPage from '../views/MarkdownPage.vue';import GalleryPage from '../views/GalleryPage.vue';export default createRouter({history:createWebHistory(),routes:[{path:'/',component:Home},{path:'/page',component:MarkdownPage},{path:'/gallery',component:GalleryPage}]});
+
+import { createRouter, createWebHistory } from 'vue-router';
+import DynamicPage from '@/views/DynamicPage.vue';
+import Contact from '@/views/Contact.vue';
+
+export default createRouter({
+  history: createWebHistory(),
+  routes: [
+    { path: '/', component: DynamicPage, props: { md: 'home' } },
+    { path: '/page/:id', component: DynamicPage, props: true },
+    { path: '/contacto', component: Contact }
+  ]
+});

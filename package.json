@@ -1,1 +1,20 @@
-{"name":"vue-full-no-r2","version":"1.0.0","type":"module","scripts":{"dev":"vite","build":"vite build","deploy":"wrangler deploy"},"dependencies":{"vue":"^3.5.32","vue-router":"^5.0.4","marked":"^17.0.6"},"devDependencies":{"vite":"^8.0.4","@vitejs/plugin-vue":"^6.0.5"}}
+
+{
+  "name": "artista-site",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "deploy": "wrangler deploy"
+  },
+  "dependencies": {
+    "vue": "^3.5.32",
+    "vue-router": "^5.0.4",
+    "marked": "^17.0.6"
+  },
+  "devDependencies": {
+    "vite": "^8.0.4",
+    "@vitejs/plugin-vue": "^6.0.5"
+  }
+}

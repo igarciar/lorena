@@ -1,1 +1,22 @@
-<template><div class='gallery-container'><button class='nav-btn left' @click='prev'>⟨</button><transition name='fade'><img :key='currentIndex' :src='currentImage' class='gallery-image'/></transition><button class='nav-btn right' @click='next'>⟩</button></div><div class='dots'><span v-for='(img,i) in images' :key='i' class='dot' :class='{active:i===currentIndex}' @click='goTo(i)'></span></div></template><script setup>import {ref,computed} from 'vue';const props=defineProps({images:Array});const currentIndex=ref(0);const currentImage=computed(()=>props.images[currentIndex.value]);const next=()=>currentIndex.value=(currentIndex.value+1)%props.images.length;const prev=()=>currentIndex.value=(currentIndex.value-1+props.images.length)%props.images.length;const goTo=i=>currentIndex.value=i;</script><style scoped>.gallery-container{position:relative;display:flex;align-items:center;justify-content:center;}.gallery-image{width:600px;max-width:100%;border-radius:12px;}.nav-btn{position:absolute;background:rgba(0,0,0,0.4);border:none;color:white;padding:10px 14px;border-radius:50%;font-size:24px;cursor:pointer;top:50%;transform:translateY(-50%);} .left{left:-40px;} .right{right:-40px;} .dots{text-align:center;margin-top:10px;} .dot{height:12px;width:12px;margin:0 5px;display:inline-block;border-radius:50%;background:#bbb;cursor:pointer;} .dot.active{background:#555;} .fade-enter-active,.fade-leave-active{transition:opacity 0.3s;} .fade-enter-from,.fade-leave-to{opacity:0;}</style>
+
+<template>
+<div class="gallery">
+  <button @click="prev">⟨</button>
+  <img :src="current" />
+  <button @click="next">⟩</button>
+</div>
+</template>
+
+<script setup>
+import { ref, computed } from 'vue';
+const props = defineProps({ images:Array });
+const i = ref(0);
+const current = computed(() => props.images[i.value]);
+const prev = () => i.value = (i.value - 1 + props.images.length) % props.images.length;
+const next = () => i.value = (i.value + 1) % props.images.length;
+</script>
+
+<style scoped>
+.gallery{ display:flex; align-items:center; gap:10px; }
+img{ max-width:300px; border-radius:10px; }
+</style>
