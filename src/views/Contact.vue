@@ -1,1 +1,1 @@
-<template><TopMenu/><div class="page"><h1 class="reveal">Contacto</h1><p class="reveal">Email: artista@proplus.com</p></div><Footer/></template><script setup>import TopMenu from "@/components/TopMenu.vue";import Footer from "@/components/Footer.vue";import {useReveal} from "@/utils/useReveal";import {onMounted} from "vue";onMounted(()=>useReveal(".reveal"));</script>
+<template><TopMenu/><div class=page><h1 class=reveal>Contacto</h1></div><Footer/></template>
