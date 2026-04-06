@@ -1,2 +1,0 @@
-import axios from "axios";
-export async function getInstagramFeed(token,user){ const url = "https://graph.instagram.com/"+user+"/media?fields=id,caption,media_url&access_token="+token; const r = await axios.get(url); return r.data.data; }

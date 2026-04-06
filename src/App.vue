@@ -1,1 +1,1 @@
-<template><router-view/></template>
+<template><TopMenu/><router-view/></template><script setup>import TopMenu from '@/components/TopMenu.vue'</script>

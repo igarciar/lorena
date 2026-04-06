@@ -1,0 +1,2 @@
+@menu:
+[{"label":"Inicio","to":"/"},{"label":"Series","children":[{"label":"Serie I","to":"/serie/serie-i"},{"label":"Serie II","to":"/serie/serie-ii"}]}]

@@ -1,1 +1,1 @@
-{"name":"artista-elite-fusion","version":"1.0.0","type":"module","scripts":{"dev":"vite","build":"vite build"},"dependencies":{"vue":"^3.5.0","vue-router":"^5.0.0","marked":"^11.1.0","axios":"^1.6.7"},"devDependencies":{"vite":"^5.0.0","@vitejs/plugin-vue":"^5.0.0"}}
+{ "name":"artista-elite","version":"1.0.0","private":true,"type":"module","scripts":{"dev":"vite","build":"vite build","preview":"vite preview"},"dependencies":{"vue":"^3.5.0","vue-router":"^5.0.0","marked":"^11.1.0"},"devDependencies":{"vite":"^5.0.0","@vitejs/plugin-vue":"^5.0.0"}}

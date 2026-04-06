@@ -1,2 +1,1 @@
-import { marked } from "marked";
-export default function parse(md){ return marked(md); }
+import {marked} from 'marked';export default md=>marked(md);

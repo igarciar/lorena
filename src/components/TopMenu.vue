@@ -1,11 +1,1 @@
-<template>
-  <header class="menu">
-    <div>Artista Elite Fusion</div>
-    <nav>
-      <router-link to="/">Inicio</router-link> |
-      <router-link to="/galeria">Galería</router-link> |
-      <router-link to="/page/demo">demo</router-link> |
-      <router-link to="/instagram">Instagram</router-link>
-    </nav>
-  </header>
-</template>
+<template><header class="menu"><strong>Artista</strong><nav><template v-for="i in menu" :key="i.label"><router-link v-if="!i.children" :to="i.to">{{i.label}}</router-link><div v-else class="submenu"><span>{{i.label}}</span><div class="submenu-items"><router-link v-for="c in i.children" :key="c.label" :to="c.to">{{c.label}}</router-link></div></div></template></nav></header></template><script setup>import{ref,onMounted}from'vue';import{useMenu}from'@/utils/useMenu';const menu=ref([]);onMounted(async()=>menu.value=await useMenu())</script>

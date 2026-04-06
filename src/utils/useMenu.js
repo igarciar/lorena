@@ -1,0 +1,2 @@
+import {ref} from 'vue';const menu=ref([]);let loaded=false;export async function useMenu(){if(!loaded){const raw=await fetch('/src/content/menu.md').then(r=>r.text());raw.split("
+").forEach(l=>{if(l.startsWith('@menu:'))menu.value=JSON.parse(l.replace('@menu:','').trim())});loaded=true}return menu}
