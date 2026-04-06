@@ -1,4 +1,4 @@
-# Ejemplo Completo Markdown + Galería + R2
+# Ejemplo Completo Markdown + Galería
 @media: /src/assets/demo1.jpg
 Texto normal.
 ## Video

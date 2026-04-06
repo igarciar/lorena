@@ -1,1 +1,1 @@
-export default {async fetch(req, env){ const url=new URL(req.url); if(url.pathname==='/'||url.pathname.startsWith('/assets')) return env.ASSETS.fetch(req); if(url.pathname==='/upload'&&req.method==='POST'){ const form=await req.formData(); const file=form.get('file'); await env.MY_BUCKET.put(file.name, await file.arrayBuffer()); return new Response('uploaded'); } return new Response('Not found',{status:404}); }};
+export default {async fetch(req, env){ const url=new URL(req.url); return env.ASSETS.fetch(req); }};
