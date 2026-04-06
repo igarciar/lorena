@@ -1,2 +1,29 @@
-<template><div class="page"><section class="hero"><img :src="'/r2/'+hero"/></section><section v-for="s in series" :key="s.id" class="series"><h2 class="series-title"><router-link :to="'/serie/'+s.id">{{s.title}}</router-link></h2><div class="grid"><router-link v-for="(i,k) in s.items" :key="k" :to="i.to" class="grid-item"><img :src="'/r2/'+i.image"/><span>{{i.label}}</span></router-link></div></section></div></template><script setup>import{ref,onMounted}from'vue';const hero=ref('');const series=ref([]);onMounted(async()=>{const raw=await fetch('/src/content/home.md').then(r=>r.text());raw.split("
-").forEach(l=>{if(l.startsWith('@hero:'))hero.value=l.replace('@hero:','').replace(/"/g,'').trim();if(l.startsWith('@series:'))series.value=JSON.parse(l.replace('@series:','').trim())})})</script>
+<template>
+  <div class="page">
+    <section class="hero"><img :src="'/r2/' + hero" /></section>
+    <section v-for="s in series" :key="s.id" class="series">
+      <h2 class="series-title">
+        <router-link :to="'/serie/' + s.id">{{ s.title }}</router-link>
+      </h2>
+      <div class="grid">
+        <router-link v-for="(i, k) in s.items" :key="k" :to="i.to" class="grid-item"
+          ><img :src="'/r2/' + i.image" /><span>{{ i.label }}</span></router-link
+        >
+      </div>
+    </section>
+  </div>
+</template>
+<script setup>
+import { ref, onMounted } from "vue";
+const hero = ref("");
+const series = ref([]);
+onMounted(async () => {
+  const raw = await fetch("/src/content/home.md").then((r) => r.text());
+  raw.split("\n").forEach((l) => {
+    if (l.startsWith("@hero:"))
+      hero.value = l.replace("@hero:", "").replace(/"/g, "").trim();
+    if (l.startsWith("@series:"))
+      series.value = JSON.parse(l.replace("@series:", "").trim());
+  });
+});
+</script>
