@@ -1,6 +1,5 @@
 <template>
   <div class="page">
-  <TopMenu />
     <h1>{{ title }}</h1>
     <div v-html="html" />
   </div>
@@ -8,7 +7,6 @@
 <script setup>
 import { ref, onMounted } from "vue";
 import parse from "@/utils/markdownEngine";
-import TopMenu from "@/components/TopMenu.vue";
 import { useRoute } from "vue-router";
 const r = useRoute();
 const title = ref("");

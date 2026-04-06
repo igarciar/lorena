@@ -11,7 +11,7 @@ h2 {
     font-weight: normal
 }
 
-.menu {
+.menu , .menu>a, .menu>a:visited{
     background: #333666;
     color: white;
     padding: 15px;
@@ -45,7 +45,6 @@ h2 {
 }
 
 .hero {
-    border: 2px solid #000;
     margin-bottom: 50px
 }
 
